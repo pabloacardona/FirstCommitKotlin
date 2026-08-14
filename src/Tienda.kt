@@ -21,26 +21,71 @@ fun main() {
 
 
     val pDisponibles = productosDisponibles(productos)
+    println("")
+    println("===============================")
     println("Productos disponibles: ${pDisponibles.size}")
-    pDisponibles.forEach { println(it) }
+    println("===============================")
+    pDisponibles.forEach {
+        println("")
+        println("PRODUCTO DISPONIBLE: ------- ")
+        println("Nombre: ${it.nombre}")
+        println("Categoria: ${it.categoria}")
+        println("Precio: ${it.precio}")
+    }
 
     val pCostosos = productosCostosos(productos)
+    println("")
+    println("===============================")
     println("Productos costosos: ${pCostosos.size}")
-    pCostosos.forEach { println(it) }
+    println("===============================")
+    pCostosos.forEach {
+        println("")
+        println("PRODUCTO COSTOSO  ------- ")
+        println("Nombre: ${it.nombre}")
+        println("Categoria: ${it.categoria}")
+        println("Precio: ${it.precio}")
+    }
 
     // busqueda de productos por nombre,m catgoria o precio
 
     val porNombre = buscarProductos(productos, CampoBusqueda.NOMBRE, "gatorade")
+    println("")
+    println("===============================")
     println("Búsqueda por nombre 'gatorade':")
-    porNombre.forEach { println(it) }
+    println("===============================")
+    porNombre.forEach {
+        println("")
+        println("---- PRODUCTO POR NOMBRE ENCONTRADO ----")
+        println("Nombre: ${it.nombre}")
+        println("Categoria: ${it.categoria}")
+        println("Precio: ${it.precio}")
+    }
 
     val porCategoria = buscarProductos(productos, CampoBusqueda.CATEGORIA, "granos")
+    println("")
+    println("===============================")
     println("Búsqueda por categoría 'granos':")
-    porCategoria.forEach { println(it) }
+    println("===============================")
+    porCategoria.forEach {
+        println("")
+        println("---- PRODUCTO POR CATEGORIA ENCONTRADO ----")
+        println("Nombre: ${it.nombre}")
+        println("Categoria: ${it.categoria}")
+        println("Precio: ${it.precio}")
+    }
 
     val porPrecio = buscarProductos(productos, CampoBusqueda.PRECIO, "10000")
+    println("")
+    println("===============================")
     println("Búsqueda por precio '10000':")
-    porPrecio.forEach { println(it) }
+    println("===============================")
+    porPrecio.forEach {
+        println("")
+        println("---- PRODUCTO POR PRECIO ENCONTRADO ----")
+        println("Nombre: ${it.nombre}")
+        println("Categoria: ${it.categoria}")
+        println("Precio: ${it.precio}")
+    }
 }
 
 
